@@ -1,0 +1,28 @@
+{
+  "name": "moodswing-server-js",
+  "version": "1.0.0",
+  "description": "sometimes happy, sometimes not",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tonygaetani/moodswing-server-js.git"
+  },
+  "keywords": [
+    "nodejs",
+    "node",
+    "express",
+    "server"
+  ],
+  "author": "tony gaetani (tony.gaetani@gmail.com)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tonygaetani/moodswing-server-js/issues"
+  },
+  "homepage": "https://github.com/tonygaetani/moodswing-server-js#readme",
+  "dependencies": {
+    "express": "^4.15.3"
+  }
+}
