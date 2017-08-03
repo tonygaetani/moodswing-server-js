@@ -1,7 +1,7 @@
 'use strict';
 const express = require('express');
 const app = express();
-const returnCodes = (process.env.RETURN_CODES || '200 502 422').split(' ').map(Number);
+const statusCodes = (process.env.STATUS_CODES || '200 502 422').split(' ').map(Number);
 const port = parseInt(process.env.PORT) || 11235;
 
 function getRandomInt(max) {
@@ -10,8 +10,8 @@ function getRandomInt(max) {
 }
 
 app.get('/', (req, res) => {
-	const idx = getRandomInt(returnCodes.length);
-	const status = returnCodes[idx];
+	const status = statusCodes[getRandomInt(statusCodes.length)];
+
 	console.log(`[${new Date().toISOString()}] returning status ${status}`);
 	res.sendStatus(status);
 });
