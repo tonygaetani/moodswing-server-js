@@ -12,6 +12,7 @@ function getRandomInt(max) {
 app.get('/', (req, res) => {
 	const idx = getRandomInt(returnCodes.length);
 	const status = returnCodes[idx];
+	console.log(`[${new Date().toISOString()}] returning status ${status}`);
 	res.sendStatus(status);
 });
 
