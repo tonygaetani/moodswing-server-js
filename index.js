@@ -9,7 +9,7 @@ function getRandomInt(max) {
 	return Math.floor(Math.random() * max);
 }
 
-app.get('/', (req, res) => {
+app.all('/', (req, res) => {
 	const status = statusCodes[getRandomInt(statusCodes.length)];
 
 	console.log(`[${new Date().toISOString()}] returning status ${status}`);
